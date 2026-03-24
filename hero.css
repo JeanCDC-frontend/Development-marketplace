@@ -1,0 +1,125 @@
+.hero{
+  margin-top:20px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:20px;
+}
+
+.hero-main{
+  position:relative;
+
+  min-height:300px;
+
+  border-radius:16px;
+
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+
+  padding:40px;
+
+  color:white;
+
+  /* IMAGEM PLACEHOLDER + OVERLAY */
+  background:
+    linear-gradient(rgba(37,99,235,0.6), rgba(37,99,235,0.7)),
+    url("https://picsum.photos/800/500");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-content{
+  max-width:400px;
+}
+
+.hero-badge{
+  display:inline-block;
+  margin-bottom:10px;
+  font-size:12px;
+  opacity:0.8;
+}
+
+.hero-content h1{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.hero-content p{
+  margin-bottom:20px;
+  opacity:0.9;
+}
+
+/* cards */
+
+.hero-side{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.hero-card{
+  position:relative;
+
+  flex:1;
+
+  border-radius:16px;
+
+  padding:20px;
+
+  color:white;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+    url("https://picsum.photos/400/300");
+
+  background-size:cover;
+  background-position:center;
+
+  min-height:140px;
+}
+
+.hero-card span{
+  font-size:12px;
+  opacity:0.8;
+}
+
+.hero-card h3{
+  font-size:16px;
+}
+
+/* cards */
+
+
+/* Responsividade */
+
+@media (max-width:768px){
+
+.hero-grid{
+  grid-template-columns:1fr;
+}
+
+.hero-main{
+  min-height:250px;
+  padding:20px;
+}
+
+.hero-side{
+  flex-direction:row;
+}
+
+.hero-card{
+  flex:1;
+}
+
+}
+
+/* Responsividade */

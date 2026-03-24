@@ -1,0 +1,18 @@
+.btn{
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  border:none;
+}
+
+.btn-primary{
+  background:var(--color-primary);
+  color:white;
+}
+
+.btn-outline{
+  background:transparent;
+  border:1px solid var(--color-border);
+  color:white;
+}
+
