@@ -1,0 +1,26 @@
+.wave-wrapper {
+  position: relative;
+  background: #0a0a0f; /* cor do fundo abaixo da onda */
+  height: 80px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 200%;   /* 200% é o segredo! Permite deslizar sem borda visível */
+  left: 0;
+}
+
+/* Cada camada tem velocidade e direção diferente */
+.wave--1 { animation: mover 4s linear infinite; opacity: 1.0; }
+.wave--2 { animation: mover 6s linear infinite reverse; opacity: 0.5; }
+.wave--3 { animation: mover 8s linear infinite; opacity: 0.3; }
+
+/* O truque: mover 50% = exatamente uma repetição do padrão */
+@keyframes mover {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.wave__path { fill: #00BFFF; }
