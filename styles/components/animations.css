@@ -1,0 +1,98 @@
+.wave-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;      /* ← mais alto para ondas dramáticas */
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3;
+}
+
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+
+/* Onda escura de base — preenche o fundo */
+.wave--base {
+  animation: moverOnda 10s linear infinite;
+  z-index: 1;
+}
+
+/* Onda ciano principal — frente */
+.wave--1 {
+  animation: moverOnda 4s linear infinite;
+  z-index: 4;
+}
+
+/* Onda ciano secundária — meio */
+.wave--2 {
+  animation: moverOnda 6s linear infinite reverse;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+/* Onda ciano terciária — fundo */
+.wave--3 {
+  animation: moverOnda 8s linear infinite;
+  z-index: 2;
+}
+
+.wave__path--dark {
+  fill: var(--wave-color-dark);
+}
+
+.wave__path {
+  fill: var(--wave-color);
+}
+
+@keyframes moverOnda {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+/* ================================
+   SEPARADOR DE ONDA ENTRE SEÇÕES
+   ================================ */
+.wave-separator {
+  position: relative;
+  width: 100%;
+  height: 80px;         /* altura da área da onda */
+  overflow: hidden;
+  margin-top: -2px;     /* remove gap entre seções */
+  background: transparent;
+}
+
+.wave-separator svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.wave-separator svg:first-child {
+  animation: moverOnda 6s linear infinite;
+}
+
+.wave-separator svg:last-child {
+  animation: moverOnda 4s linear infinite reverse;
+}
+```
+
+---
+
+**7️⃣ Mapa mental para ajustar qualquer onda**
+```
+Quero onda MAIS ALTA?     → aumente a diferença entre Y do destino e Y dos ctrls
+Quero onda MAIS SUAVE?    → aproxime os Y dos ctrls do Y do destino
+Quero MAIS ciclos?        → reduza o passo (ex: de 480 para 240 em X)
+Quero onda MAIS LENTA?    → aumente a duração na animation
+Quero onda INVERTIDA?     → troque os L finais de y=160 para y=0

@@ -1,0 +1,73 @@
+:root {
+  /* =========================
+     1. PRIMITIVE TOKENS
+     ========================= */
+
+  /* GRAY SCALE */
+  --gray-900: #0F0F1A;
+  --gray-800: #161625;
+  --gray-700: #1E1E2F;
+  --gray-600: #2A2A3D;
+  --gray-500: #3F3F5A;
+  --gray-400: #71717A;
+  --gray-300: #A1A1AA;
+  --gray-200: #D4D4D8;
+  --gray-100: #F4F4F5;
+
+  /* BRAND - PURPLE */
+  --primary-500: #7C3AED;
+  --primary-400: #A78BFA;
+  --primary-600: #5B21B6;
+
+  --secondary-400: #C084FC;
+
+  /*Blue*/
+  --cyan-500: #00BFFF;
+  --cyan-700: #0aa3c5;
+
+  /* =========================
+     2. SEMANTIC TOKENS
+     ========================= */
+
+  /* BACKGROUND */
+  --bg-primary: var(--gray-900);
+  --bg-secondary: var(--gray-800);
+  --bg-card: var(--gray-700);
+
+  /* TEXT */
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-300);
+  --text-muted: var(--gray-400);
+
+  /* BORDER */
+  --border-default: var(--gray-600);
+
+  /* BRAND USAGE */
+  --color-primary: var(--primary-500);
+  --color-primary-light: var(--primary-400);
+  --color-secondary: var(--secondary-400);
+
+  /* =========================
+     3. EFFECTS
+     ========================= */
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--primary-500),
+    var(--secondary-400)
+  );
+
+  --gradient-secondary: linear-gradient(
+    135deg,
+      var(--cyan-500),    
+      var(--cyan-700)
+    );
+
+    /* =========================
+     4. WAVE
+     ========================= */
+  --wave-color: #00BFFF;       /* cor das ondas ciano */
+  --wave-color-dark: var(--gray-900); /* cor da onda de base escura */
+
+}
+

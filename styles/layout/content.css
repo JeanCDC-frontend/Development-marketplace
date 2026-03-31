@@ -1,0 +1,49 @@
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.container-information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem;
+}
+
+.content-information {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    max-width: 500px;
+}
+
+.img-content {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.subtitle-content {
+    font-size: 3rem;
+    font-weight: 600;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.information-content {  
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .container-information {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

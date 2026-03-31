@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-size: 14px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--color-primary);
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
